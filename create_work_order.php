@@ -581,10 +581,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         Equipment
     </a>
 
-    <a href="maintenance.php">
-        Maintenance Schedule
-    </a>
-
     <a href="inspection.php">
         Inspection
     </a>
@@ -595,33 +591,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     >
         Work Orders
     </a>
-
-    <a href="maintenance_history.php">
-        Maintenance History
+    <a href="history.php">
+        History
     </a>
 
-
-    <div class="menu-title">
-        Management
-    </div>
-
-
-    <a
-        href="#"
-        class="disabled"
-    >
+    <a href="reports.php">
         Reports
     </a>
 
 
     <?php if ($_SESSION["role"] === "admin"): ?>
-
-        <a
-            href="#"
-            class="disabled"
-        >
-            User Management
-        </a>
+    <a href="user_management.php">
+        User Management
+    </a>
 
     <?php endif; ?>
 

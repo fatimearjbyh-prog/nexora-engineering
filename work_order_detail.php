@@ -537,10 +537,6 @@ $wo_number =
         Equipment
     </a>
 
-    <a href="maintenance.php">
-        Maintenance Schedule
-    </a>
-
     <a href="inspection.php">
         Inspection
     </a>
@@ -551,21 +547,11 @@ $wo_number =
     >
         Work Orders
     </a>
-
-    <a href="maintenance_history.php">
-        Maintenance History
+     <a href="history.php">
+        History
     </a>
 
-
-    <div class="menu-title">
-        Management
-    </div>
-
-
-    <a
-        href="#"
-        class="disabled"
-    >
+    <a href="reports.php">
         Reports
     </a>
 
@@ -578,6 +564,14 @@ $wo_number =
         </a>
 
     <?php endif; ?>
+
+    
+    <a href="logout.php"
+        onclick="return confirm('Are you sure you want to logout?');"
+        style="color: #f87171;">
+            Logout
+    </a>
+
 
 </div>
 

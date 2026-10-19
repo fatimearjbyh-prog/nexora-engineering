@@ -371,37 +371,35 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         Equipment
     </a>
 
-    <a href="maintenance.php">
-        Maintenance Schedule
-    </a>
-
-    <a href="#" class="disabled">
+    <a href="inspection.php">
         Inspection
     </a>
 
-    <a href="#" class="disabled">
+    <a href="work_orders.php">
         Work Orders
     </a>
 
-    <a href="maintenance_history.php">
-        Maintenance History
+    <a href="history.php">
+        History 
     </a>
 
-    <div class="menu-title">
-        Management
-    </div>
-
-    <a href="#" class="disabled">
+    <a href="reports.php">
         Reports
     </a>
 
     <?php if ($_SESSION["role"] === "admin"): ?>
 
-        <a href="#" class="disabled">
+        <a href="user_management.php">
             User Management
         </a>
 
     <?php endif; ?>
+
+        <a href="logout.php"
+        onclick="return confirm('Are you sure you want to logout?');"
+        style="color: #f87171;">
+            Logout
+        </a>
 
 </div>
 
