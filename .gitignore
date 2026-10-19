@@ -1,0 +1,18 @@
+
+# Local database configuration
+koneksi.php
+koneksi copy.php
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local development files
+.vscode/
+.idea/
+*.log
+
+# Database backups
+*.sql
+*.sql.gz
+*.zip
