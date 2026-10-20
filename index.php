@@ -368,6 +368,112 @@ $recent_equipment = mysqli_query(
             }
 
         }
+        
+    /* Tombol menu disembunyikan pada desktop */
+        .menu-toggle {
+            display: none;
+        }
+
+    /* Tampilan HP */
+    @media (max-width: 768px) {
+
+    .sidebar {
+        left: -250px;
+        top: 0;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: #102a43;
+        color: white;
+        border: none;
+        padding: 10px 13px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 20px;
+        flex-shrink: 0;
+    }
+
+    .topbar {
+        height: auto;
+        min-height: 70px;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .topbar h3 {
+        font-size: 13px;
+    }
+
+    .user-info {
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 20px 15px;
+    }
+
+    .page-header {
+        gap: 15px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .panel {
+        overflow-x: auto;
+        padding: 15px;
+    }
+
+    .panel table {
+        min-width: 650px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+.close-sidebar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .close-sidebar {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+}
+
+
 
     </style>
 
@@ -380,6 +486,11 @@ $recent_equipment = mysqli_query(
 ========================= -->
 
 <div class="sidebar">
+    
+    <button type="button" class="close-sidebar" onclick="toggleSidebar()">
+        &times;
+    </button>
+
 
     <div class="brand">
 
@@ -442,6 +553,10 @@ $recent_equipment = mysqli_query(
 <div class="main">
 
     <div class="topbar">
+    
+        <button class="menu-toggle" type="button" onclick="toggleSidebar()">
+             ☰
+        </button>
 
         <h3>
             Maintenance & Equipment Inspection System
@@ -679,6 +794,11 @@ $recent_equipment = mysqli_query(
     </div>
 
 </div>
+
+
+<script src="responsive.js"></script>
+
+
 
 </body>
 

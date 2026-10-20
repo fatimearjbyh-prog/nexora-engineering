@@ -362,6 +362,97 @@ $query = mysqli_query(
             padding: 35px;
         }
 
+        
+/* Responsive Mobile */
+.menu-toggle,
+.close-sidebar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        left: -250px;
+        top: 0;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: #102a43;
+        color: white;
+        border: none;
+        padding: 10px 13px;
+        border-radius: 8px;
+        font-size: 20px;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .close-sidebar {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: transparent;
+        color: white;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .topbar {
+        height: auto;
+        min-height: 70px;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .topbar h3 {
+        font-size: 13px;
+    }
+
+    .user-info {
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 20px 15px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .panel {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .panel table {
+        min-width: 650px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+
     </style>
 
 </head>
@@ -371,6 +462,10 @@ $query = mysqli_query(
 
 
 <div class="sidebar">
+
+    <button class="close-sidebar" type="button" onclick="toggleSidebar()">
+        &times;
+    </button>
 
     <div class="brand">
 
@@ -435,6 +530,10 @@ $query = mysqli_query(
 
 
     <div class="topbar">
+
+        <button class="menu-toggle" type="button" onclick="toggleSidebar()">
+            ☰
+        </button>
 
         <h3>
             Maintenance & Equipment Inspection System
@@ -708,7 +807,7 @@ $query = mysqli_query(
 
 
 </div>
-
+<script src="responsive.js"></script>
 
 </body>
 
