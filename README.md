@@ -77,6 +77,57 @@ Electrical Engineering Graduate — Universitas Trunojoyo Madura
 
 GitHub: https://github.com/fatimearjbyh-prog
 
+
 ## Project Status
 
-Developed and tested in a local XAMPP environment. Online deployment is planned.
+Successfully developed, tested, and deployed a web-based Equipment Inspection & Corrective Maintenance System using PHP and MySQL.
+
+The application was developed locally using XAMPP and deployed online using InfinityFree.
+
+**Live Demo:** http://nexora-engineering.xo.je/login.php
+
+**Status:** Completed and Deployed.
+
+
+## Application Screenshots
+
+### 1. Login Page
+User authentication page for accessing the system.
+
+![Login Page](screenshots/login-nexora.png)
+
+### 2. Dashboard
+Overview of equipment conditions and maintenance activities.
+
+![Dashboard](screenshots/dashboard-nexora.png)
+
+### 3. Equipment Management
+Equipment data management and monitoring.
+
+![Equipment Management](screenshots/equipment-nexora.png)
+
+### 4. Equipment Inspection
+Inspection form for recording equipment conditions.
+
+![Equipment Inspection](screenshots/inspection-nexora.png)
+
+### 5. Work Orders
+Corrective maintenance work order management and progress tracking.
+
+![Work Orders](screenshots/workorders-nexora.png)
+
+### 6. Maintenance History
+Historical records of inspections and maintenance activities.
+
+![Maintenance History](screenshots/history-nexora.png)
+
+### 7. Reports
+Equipment inspection and maintenance reporting.
+
+![Reports](screenshots/reports-nexora.png)
+
+### 8. User Management
+User administration and role-based access management.
+
+![User Management](screenshots/user-management.png)
+
